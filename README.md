@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="om">
 <head>
   <meta charset="UTF-8">
@@ -128,15 +128,7 @@
     .success {
       display: block;
       background: #e8f7ee;
-      color: #176b38;
-    }
-
-    .error {
-      display: block;
-      background: #fdecec;
-      color: #a02020;
-    }
-
+      color: 
     .footer {
       text-align: center;
       margin-top: 25px;
@@ -225,50 +217,15 @@
   const supabaseClient =
     window.supabase.createClient(
       SUPABASE_URL,
-      SUPABASE_KEY
-    );
-
-
-  /* =====================================================
-     ELEMENTS
-     ===================================================== */
-
-  const loginForm =
-    document.getElementById("loginForm");
-
-  const loginButton =
-    document.getElementById("loginButton");
-
-  const forgotPassword =
-    document.getElementById("forgotPassword");
-
-  const message =
-    document.getElementById("message");
-
+      
 
   /* =====================================================
      MESSAGE FUNCTION
-     ===================================================== */
-
-  function showMessage(text, type) {
-
+     
     message.textContent = text;
 
     message.className =
-      "message " + type;
-
-  }
-
-
-  /* =====================================================
-     CHECK EXISTING SESSION
-     ===================================================== */
-
-  async function checkSession() {
-
-    const {
-      data: { session }
-    } = await supabaseClient.auth.getSession();
+      "message aseClient.auth.getSession();
 
     if (session) {
 
@@ -279,24 +236,11 @@
 
   }
 
-
-  checkSession();
-
-
-  /* =====================================================
-     LOGIN
-     ===================================================== */
-
   loginForm.addEventListener(
-    "submit",
-    async function(event) {
-
+    
       event.preventDefault();
 
-      const email =
-        document.getElementById("email").value.trim();
-
-      const password =
+      co
         document.getElementById("password").value;
 
       if (!email || !password) {
@@ -304,10 +248,7 @@
         showMessage(
           "Email fi Password guutaa.",
           "error"
-        );
-
-        return;
-      }
+        
 
 
       loginButton.disabled = true;
@@ -316,30 +257,16 @@
         "Seenaa jira...";
 
 
-      const {
+      co
         data,
         error
-      } = await supabaseClient.auth.signInWithPassword({
+      } =t supabaseClient.auth.signInWithPassword({
         email: email,
         password: password
-      });
-
-
-      if (error) {
-
-        showMessage(
-          "Login hin milkoofne: " +
-          error.message,
-          "error"
-        );
-
-        loginButton.disabled = false;
-
-        loginButton.textContent =
-          "🔐 Seeni";
-
-        return;
-      }
+    
+          "Login hin mil
+        r
+      
 
 
       if (data.session) {
@@ -349,7 +276,7 @@
           "success"
         );
 
-        setTimeout(function() {
+        setTimeout(f {
 
           window.location.href =
             "dashboard.html";
@@ -362,53 +289,22 @@
   );
 
 
-  /* =====================================================
-     PASSWORD RESET
-     ===================================================== */
 
-  forgotPassword.addEventListener(
-    "click",
-    async function() {
-
-      const email =
+    
         document.getElementById("email").value.trim();
 
 
       if (!email) {
 
         showMessage(
-          "Jalqaba Email keessan galchaa.",
-          "error"
-        );
-
-        return;
-      }
-
-
-      const {
-        error
+          "Jalqaba Email keessan 
       } = await supabaseClient.auth.resetPasswordForEmail(
         email,
         {
           redirectTo:
             window.location.origin +
             window.location.pathname.replace(
-              "index.html",
-              "password.html"
-            )
-        }
-      );
-
-
-      if (error) {
-
-        showMessage(
-          "Password reset hin milkoofne: " +
-          error.message,
-          "error"
-        );
-
-        return;
+              "index.html",qQqqq
       }
 
 
@@ -417,18 +313,7 @@
         "success"
       );
 
-    }
-  );
-
-
-  /* =====================================================
-     AUTH STATE CHANGE
-     ===================================================== */
-
-  supabaseClient.auth.onAuthStateChange(
-    function(event, session) {
-
-      if (
+    
         event === "SIGNED_IN" &&
         session
       ) {
