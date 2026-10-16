@@ -317,23 +317,14 @@
 
 
       const {
-        data,
-        error
       } = await supabaseClient.auth.signInWithPassword({
         email: email,
         password: password
       });
 
 
-      if (error) {
 
-        showMessage(
-          "Login hin milkoofne: " +
-          error.message,
-          "error"
-        );
-
-        loginButton.disabled = false;
+        loginButton.disabled = 
 
         loginButton.textContent =
           "🔐 Seeni";
@@ -356,92 +347,5 @@
 
         }, 700);
 
-      }
-
-    }
-  );
-
-
-  /* =====================================================
-     PASSWORD RESET
-     ===================================================== */
-
-  forgotPassword.addEventListener(
-    "click",
-    async function() {
-
-      const email =
-        document.getElementById("email").value.trim();
-
-
-      if (!email) {
-
-        showMessage(
-          "Jalqaba Email keessan galchaa.",
-          "error"
-        );
-
-        return;
-      }
-
-
-      const {
-        error
-      } = await supabaseClient.auth.resetPasswordForEmail(
-        email,
-        {
-          redirectTo:
-            window.location.origin +
-            window.location.pathname.replace(
-              "index.html",
-              "password.html"
-            )
-        }
-      );
-
-
-      if (error) {
-
-        showMessage(
-          "Password reset hin milkoofne: " +
-          error.message,
-          "error"
-        );
-
-        return;
-      }
-
-
-      showMessage(
-        "Link haaromsaa Password email keessanitti ergameera.",
-        "success"
-      );
-
-    }
-  );
-
-
-  /* =====================================================
-     AUTH STATE CHANGE
-     ===================================================== */
-
-  supabaseClient.auth.onAuthStateChange(
-    function(event, session) {
-
-      if (
-        event === "SIGNED_IN" &&
-        session
-      ) {
-
-        window.location.href =
-          "dashboard.html";
-
-      }
-
-    }
-  );
-
-</script>
-
-</body>
-</html>
+  supabase.com
+  
