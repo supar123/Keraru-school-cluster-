@@ -208,13 +208,10 @@
      SUPABASE CONFIGURATION
      ===================================================== */
 
-  const SUPABASE_URL =
-    "https://blwpuiannyditjsaghdn.supabase.co";
 
-  const SUPABASE_KEY =
     "sb_publishable_hJanJxqPXpTnFv-GTtjNWg_ITFJe-D7";
 
-  const supabaseClient =
+
     window.supabase.createClient(
       SUPABASE_URL,
       
@@ -247,7 +244,7 @@
 
         showMessage(
           "Email fi Password guutaa.",
-          "error"
+        
         
 
 
@@ -257,9 +254,7 @@
         "Seenaa jira...";
 
 
-      co
-        data,
-        error
+    
       } =t supabaseClient.auth.signInWithPassword({
         email: email,
         password: password
