@@ -172,23 +172,16 @@
         type="email"
         id="email"
         placeholder="Email keessan galchaa"
-        required
-        autocomplete="email"
-      >
+      umarmuussaa7@gmail.com         autocomplete="email"
+      >umarmuussaa7@gmail.com 
 
       <label for="password">Password</label>
       <input
         type="password"
-        id="password"
-        placeholder="Password keessan galchaa"
-        required
-        autocomplete="current-password"
-      >
-
-      <span class="forgot" id="forgotPassword">
-        Password irraanfattee?
-      </span>
-
+        id="password"supar123
+        placeholder="Password keessan galchaa
+        autocomplete="current-password 
+        supar123 
       <button type="submit" id="loginButton">
         🔐 Seeni
       </button>
@@ -240,8 +233,7 @@
       co
         document.getElementById("password").value;
 
-      if (!email || !password) {
-
+      if (!email umarmuussaa7@gmail.com|| !password) {supar123
         showMessage(
           "Email fi Password guutaa.",
         
