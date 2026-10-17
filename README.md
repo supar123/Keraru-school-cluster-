@@ -1035,7 +1035,7 @@ placeholder="Mana Barumsaa">
 </div>
 
 <div class="card">
-<h4>Dura Bu'oota</h4>
+<h4>Dura Bu'oota<Abdallaa yuusuf, mahammad yuusuf, Yaasiin Abraahim,Maliyoon kiflee,Abushaa Gobayyoo,Alfiyaa Aliyyii,,Umar yaasiin,Abdurmaan Ahimad,Amaddiin Umar,Takkaaba Addisee,Maheer sufiyaan/h4>
 <strong id="rLeaders">0</strong>
 </div>
 
@@ -1051,7 +1051,7 @@ placeholder="Mana Barumsaa">
 <th>Baay'ina</th>
 </tr>
 <tr>
-<td>Manneen Barnootaa</td>
+<td>Manneen Barnootaa<Garmaama, Badhaasaa ,laga leencaa, Gaara Leencaa, kufa kaasa,DirreeAannanii, Babbilee, Ulaagaa Guddoo,Baha Aduu,Barihee,Dhaqqabaa/td>
 <td id="rr1">0</td>
 </tr>
 <tr>
@@ -1091,14 +1091,7 @@ placeholder="Mana Barumsaa">
 <p style="margin-top:15px">
 Sirna bulchiinsa mana barumsaa kilaastaraa:
 manneen barnootaa, dura bu'oota, barsiisota,
-barattoota, karooraalee fi gabaasa hordofuuf.
-</p>
-
-<br>
-
-<b>Software Developer:</b>
-<p>Ahmed Mume</p>
-
+barattoota, karooraalee fi gabaasa 
 </div>
 </section>
 
@@ -1129,11 +1122,7 @@ let role=document.getElementById("role").value;
 if(u==="admin" && p==="1234"){
 
 document.getElementById("loginPage").style.display="none";
-document.getElementById("app").style.display="block";
-document.getElementById("currentRole").innerText=role;
-
-}else{
-alert("Username ykn Password sirrii miti!");
+document.getElementById("app").style.display="block"
 }
 
 }
